@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 56px; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; }
+        .dashboard-section { margin-top: 30px; }
+        .card { margin-top: 20px; }
+        .action-btns { margin-top: 20px; }
+        .chart-container { margin-top: 30px; }
+        .transactions-table { margin-top: 20px; }
+        .footer { background: #212529; color: white; text-align: center; padding: 20px 0; margin-top: 40px; }
+        .chart-placeholder { height: 300px; background: #f0f0f0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Finance Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="user.html">User</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Accounts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Transactions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section container">
+        <h2 class="text-center">Finance Management Dashboard</h2>
+
+        <!-- Account Management Section -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Manage Accounts</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="account-name" class="form-label">Account Name</label>
+                                <input type="text" class="form-control" id="account-name" placeholder="Enter account name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="account-type" class="form-label">Account Type</label>
+                                <select class="form-select" id="account-type">
+                                    <option value="savings">Savings</option>
+                                    <option value="checking">Checking</option>
+                                    <option value="credit">Credit</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="initial-balance" class="form-label">Initial Balance</label>
+                                <input type="number" class="form-control" id="initial-balance" placeholder="Enter initial balance">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transactions Section -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Transaction Management</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="transaction-amount" class="form-label">Amount</label>
+                                <input type="number" class="form-control" id="transaction-amount" placeholder="Enter transaction amount">
+                            </div>
+                            <div class="mb-3">
+                                <label for="transaction-type" class="form-label">Transaction Type</label>
+                                <select class="form-select" id="transaction-type">
+                                    <option value="deposit">Deposit</option>
+                                    <option value="withdrawal">Withdrawal</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="transaction-date" class="form-label">Transaction Date</label>
+                                <input type="date" class="form-control" id="transaction-date">
+                            </div>
+                            <button type="submit" class="btn btn-success">Add Transaction</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="transactions-table">
+            <h4>Recent Transactions</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Account</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-02-01</td>
+                        <td>Savings</td>
+                        <td>$500</td>
+                        <td>Deposit</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-02</td>
+                        <td>Checking</td>
+                        <td>$100</td>
+                        <td>Withdrawal</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-03</td>
+                        <td>Credit</td>
+                        <td>$200</td>
+                        <td>Deposit</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- AI Analysis & Visualization -->
+        <div class="chart-container row">
+            <div class="col-md-6">
+                <h4>Account Analysis (AI)</h4>
+                <div class="chart-placeholder">
+                    <!-- Placeholder for AI-based Analysis (e.g., trends, patterns, etc.) -->
+                    <p>AI-based account analysis chart goes here (integrate with libraries such as Chart.js or D3.js).</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Transactions Overview (AI)</h4>
+                <div class="chart-placeholder">
+                    <!-- Placeholder for AI-based Transactions Overview -->
+                    <p>AI-based transaction visualization goes here (integrate with visualization libraries).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Predictions Section -->
+        <div class="chart-container">
+            <h4>Financial Predictions (AI)</h4>
+            <div class="chart-placeholder">
+                <!-- Placeholder for AI-based Financial Predictions -->
+                <p>AI-based predictions chart goes here (forecasting financial trends, balances, etc.).</p>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-btns">
+            <button class="btn btn-danger">Delete Account</button>
+            <button class="btn btn-warning">Generate Report</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Finance Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

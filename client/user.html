@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - UCP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 56px; font-family: Arial, sans-serif; }
+        .dashboard-section {
+            padding: 50px 0;
+            background: #f8f9fa;
+        }
+        .dashboard-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .dashboard-card:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .equal-height {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .login-signup-container {
+            position: absolute;
+            right: 20px;
+            top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">UCP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="user.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="messaging.html">Messaging</a></li>
+                    <li class="nav-item"><a class="nav-link" href="videoconf.html">Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="email.html">Email</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="finance.html">Finance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="business.html">Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Login/Signup Button -->
+    <div class="login-signup-container">
+        <a href="login.html" class="btn btn-outline-dark me-2">Login</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+    
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <div class="container">
+            <h1 class="text-center mb-4">User Dashboard</h1>
+            <div class="row equal-height">
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="dashboard-card w-100">
+                        <h3>Messaging</h3>
+                        <p>Access your real-time messages and chatbots.</p>
+                        <a href="messaging.html" class="btn btn-primary">Go to Messaging</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="dashboard-card w-100">
+                        <h3>Video Calls</h3>
+                        <p>Start or join HD video meetings.</p>
+                        <a href="video.html" class="btn btn-primary">Go to Video</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="dashboard-card w-100">
+                        <h3>Email</h3>
+                        <p>Manage your emails efficiently.</p>
+                        <a href="email.html" class="btn btn-primary">Go to Email</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="dashboard-card w-100">
+                        <h3>Projects</h3>
+                        <p>Organize and track your projects.</p>
+                        <a href="project.html" class="btn btn-primary">Go to Projects</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="dashboard-card w-100">
+                        <h3>Finance</h3>
+                        <p>Monitor and manage your business finances.</p>
+                        <a href="finance.html" class="btn btn-primary">Go to Finance</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="dashboard-card w-100">
+                        <h3>Analytics</h3>
+                        <p>Gain insights through business analytics.</p>
+                        <a href="analytics.html" class="btn btn-primary">Go to Analytics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Unified Communication Platform. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .dashboard-section {
+            margin-top: 30px;
+        }
+        .project-card {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .task-card {
+            margin-top: 10px;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .task-progress {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .task-progress-bar {
+            height: 100%;
+            border-radius: 5px;
+        }
+        .action-btns {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .important-btn {
+            margin-left: 10px;
+            background-color: #ffca28;
+        }
+        .footer {
+            background: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .timeline {
+            margin-top: 30px;
+        }
+        .timeline-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .gantt-chart {
+            margin-top: 30px;
+            height: 300px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Project Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="user.html">User</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section container">
+        <h2 class="text-center">Project Dashboard</h2>
+        
+        <!-- New Task / Project Section -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Create New Task</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="task-name" class="form-label">Task Name</label>
+                                <input type="text" class="form-control" id="task-name" placeholder="Enter task name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="assigned-to" class="form-label">Assign To</label>
+                                <select class="form-select" id="assigned-to">
+                                    <option value="user1">User 1</option>
+                                    <option value="user2">User 2</option>
+                                    <option value="user3">User 3</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="due-date" class="form-label">Due Date</label>
+                                <input type="date" class="form-control" id="due-date">
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">Add Task</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Overview -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Project Overview</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <strong>Project 1</strong>
+                                <div class="progress task-progress">
+                                    <div class="progress-bar bg-success task-progress-bar" style="width: 60%"></div>
+                                </div>
+                                <span>Progress: 60%</span>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Project 2</strong>
+                                <div class="progress task-progress">
+                                    <div class="progress-bar bg-warning task-progress-bar" style="width: 30%"></div>
+                                </div>
+                                <span>Progress: 30%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Tasks -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Current Tasks</h4>
+                        <div class="task-card">
+                            <h5>Task 1: Complete Project Report</h5>
+                            <p>Assigned to: User 1</p>
+                            <div class="progress task-progress">
+                                <div class="progress-bar bg-info task-progress-bar" style="width: 50%"></div>
+                            </div>
+                            <p>Due Date: 2025-02-15</p>
+                            <div class="action-btns">
+                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-warning important-btn">Mark as Important</button>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <h5>Task 2: Design New UI</h5>
+                            <p>Assigned to: User 2</p>
+                            <div class="progress task-progress">
+                                <div class="progress-bar bg-danger task-progress-bar" style="width: 25%"></div>
+                            </div>
+                            <p>Due Date: 2025-02-20</p>
+                            <div class="action-btns">
+                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-warning important-btn">Mark as Important</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-btns">
+            <button class="btn btn-success">Complete Project</button>
+            <button class="btn btn-danger">Delete Project</button>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline">
+            <h4>Project Timeline</h4>
+            <div class="timeline-item">
+                <strong>Task 1: Complete Project Report</strong> - Due: 2025-02-15
+            </div>
+            <div class="timeline-item">
+                <strong>Task 2: Design New UI</strong> - Due: 2025-02-20
+            </div>
+        </div>
+
+        <!-- Gantt Chart Section -->
+        <div class="gantt-chart">
+            <h4>Gantt Chart</h4>
+            <!-- Placeholder for Gantt Chart (integrate with a Gantt chart library) -->
+            <p>Gantt Chart goes here (use a library such as DHTMLX or Google Charts for implementation).</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Project Management Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analytics & Operations Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 56px; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; }
+        .dashboard-section { margin-top: 30px; }
+        .card { margin-top: 20px; }
+        .action-btns { margin-top: 20px; }
+        .chart-container { margin-top: 30px; }
+        .footer { background: #212529; color: white; text-align: center; padding: 20px 0; margin-top: 40px; }
+        .chart-placeholder { height: 300px; background: #f0f0f0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Business Analytics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="user.html">user</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Operations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section container">
+        <h2 class="text-center">Business Analytics & Operations Dashboard</h2>
+
+        <!-- Data Analysis Section -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Business Performance Analysis</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="performance-metrics" class="form-label">Choose Metrics</label>
+                                <select class="form-select" id="performance-metrics">
+                                    <option value="sales">Sales</option>
+                                    <option value="expenses">Expenses</option>
+                                    <option value="profit">Profit</option>
+                                    <option value="growth">Growth</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="analysis-period" class="form-label">Period</label>
+                                <select class="form-select" id="analysis-period">
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="quarterly">Quarterly</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Analyze</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reporting Section -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Generate Report</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="report-type" class="form-label">Report Type</label>
+                                <select class="form-select" id="report-type">
+                                    <option value="financial">Financial</option>
+                                    <option value="operational">Operational</option>
+                                    <option value="marketing">Marketing</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="report-period" class="form-label">Report Period</label>
+                                <select class="form-select" id="report-period">
+                                    <option value="last-quarter">Last Quarter</option>
+                                    <option value="this-quarter">This Quarter</option>
+                                    <option value="year-to-date">Year to Date</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success">Generate Report</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI-Driven Business Insights Section -->
+        <div class="chart-container row">
+            <div class="col-md-6">
+                <h4>AI-Powered Performance Predictions</h4>
+                <div class="chart-placeholder">
+                    <!-- Placeholder for AI-based Performance Prediction chart -->
+                    <p>AI-powered business performance prediction (e.g., forecast next month's sales or growth trends).</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>AI-Based Operational Insights</h4>
+                <div class="chart-placeholder">
+                    <!-- Placeholder for AI-based Operational Insights chart -->
+                    <p>AI-generated insights (e.g., operational bottlenecks, optimization suggestions).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualizations Section -->
+        <div class="chart-container">
+            <h4>Business Insights Visualization</h4>
+            <div class="chart-placeholder">
+                <!-- Placeholder for visualizing business insights -->
+                <p>Visualization of key metrics (e.g., sales vs expenses, revenue vs growth, etc.).</p>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-btns">
+            <button class="btn btn-danger">Delete Report</button>
+            <button class="btn btn-warning">Export Data</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Business Analytics & Operations Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

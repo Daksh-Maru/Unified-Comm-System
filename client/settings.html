@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - UCP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 56px; font-family: Arial, sans-serif; }
+        .hero-section {
+            background: linear-gradient(to right, #007bff, #6610f2);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .settings-box {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .settings-form .form-group {
+            margin-bottom: 20px;
+        }
+        .footer {
+            background: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .toggle-btn-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .toggle-btn-label input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">UCP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="user.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="messaging.html">Messaging</a></li>
+                    <li class="nav-item"><a class="nav-link" href="videoconf.html">Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="email.html">Email</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="settings.html">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4">Manage Your Settings</h1>
+            <p class="lead">Customize your preferences and platform settings easily.</p>
+        </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section class="container">
+        <div class="settings-box">
+            <h3 class="text-center">Account Settings</h3>
+            <form class="settings-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter new password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm new password">
+                </div>
+
+                <h4 class="mt-4">Notification Settings</h4>
+                <div class="form-group toggle-btn-label">
+                    <label for="email-notifications">Email Notifications</label>
+                    <label class="switch">
+                        <input type="checkbox" id="email-notifications">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="form-group toggle-btn-label">
+                    <label for="sms-notifications">SMS Notifications</label>
+                    <label class="switch">
+                        <input type="checkbox" id="sms-notifications">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <h4 class="mt-4">Privacy Settings</h4>
+                <div class="form-group toggle-btn-label">
+                    <label for="profile-visibility">Profile Visibility</label>
+                    <label class="switch">
+                        <input type="checkbox" id="profile-visibility">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <h4 class="mt-4">AI Preferences</h4>
+                <div class="form-group toggle-btn-label">
+                    <label for="ai-assistant">AI Assistant</label>
+                    <label class="switch">
+                        <input type="checkbox" id="ai-assistant">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <h4 class="mt-4">General Settings</h4>
+                <div class="form-group">
+                    <label for="theme-selection">Select Theme</label>
+                    <select class="form-select" id="theme-selection">
+                        <option value="light">Light Theme</option>
+                        <option value="dark">Dark Theme</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="language-selection">Select Language</label>
+                    <select class="form-select" id="language-selection">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="timezone-selection">Select Timezone</label>
+                    <select class="form-select" id="timezone-selection">
+                        <option value="utc-5">UTC -5 (EST)</option>
+                        <option value="utc+1">UTC +1 (CET)</option>
+                        <option value="utc+8">UTC +8 (SGT)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-4">Save Settings</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Unified Communication Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

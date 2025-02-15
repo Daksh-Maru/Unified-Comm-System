@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging - UCP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 56px; font-family: Arial, sans-serif; }
+        .chat-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .chat-input {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .chat-input select,
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .chat-input button {
+            margin-left: 10px;
+        }
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .chatbot-button:hover {
+            background: #0056b3;
+        }
+        .sub-features {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">UCP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="user.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="messaging.html">Messaging</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Messaging Section -->
+    <div class="chat-container">
+        <h2 class="text-center">Real-Time Messaging</h2>
+        <div class="sub-features">
+            <button class="btn btn-outline-primary">Start a New Chat</button>
+            <button class="btn btn-outline-danger">Delete a Chat</button>
+            <button class="btn btn-outline-warning">Summarize a Message</button>
+            <button class="btn btn-outline-success">Generate AI Response</button>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <p><strong>User:</strong> Hello!</p>
+            <p><strong>AI:</strong> Hi! How can I assist you today?</p>
+        </div>
+        <div class="chat-input">
+            <select id="user-dropdown" class="form-select">
+                <option value="user1">User 1</option>
+                <option value="user2">User 2</option>
+                <option value="user3">User 3</option>
+                <option value="user4">User 4</option>
+            </select>
+            <input type="text" id="message" placeholder="Type a message...">
+            <button class="btn btn-primary">Send</button>
+        </div>
+    </div>
+    
+    <!-- AI Chatbot Help Button -->
+    <button class="chatbot-button">AI Chatbot Help</button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
