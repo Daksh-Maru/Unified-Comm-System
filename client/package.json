@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.25.5",
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/vite": "^4.0.15",
     "bootstrap": "^5.3.3",
     "client": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router": "^7.4.1",
     "shadcn": "^2.4.0-canary.17",
     "tailwindcss": "^4.0.15"
   },

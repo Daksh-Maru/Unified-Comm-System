@@ -1,0 +1,45 @@
+/* Home.css */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+/* Home.css */
+.hero-section {
+    /* width: 100vw; */
+    /* min-width: 100%; */
+    padding: 7rem 0;
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+  }
+  
+  
+  .feature-box {
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-box:hover {
+    transform: scale(1.05);
+    background: #e9ecef;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cta-section {
+    background: #343a40;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .footer {
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }

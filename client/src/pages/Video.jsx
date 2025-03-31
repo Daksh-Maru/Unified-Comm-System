@@ -1,4 +1,4 @@
-function videoconf() {
+function Video() {
   return (
     <div>
       <h1>Video Conference</h1>
@@ -7,4 +7,4 @@ function videoconf() {
   );
 }
 
-export default videoconf;
+export default Video;

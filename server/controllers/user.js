@@ -4,7 +4,7 @@ let createUser = async (req, res) => {
     try {
         const newUser = await userModel.create({
             name: "John Doe",
-            email: "jd@gmail.com",
+            email: "jd326@gmail.com",
             username: "johndoe",
         });
         console.log(newUser);
