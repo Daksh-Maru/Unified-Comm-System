@@ -4,18 +4,21 @@
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Email from './pages/Email.jsx'
+import Email from './pages/EmailIntegration.jsx'
 import Dashboard from './pages/User.jsx'
 import Messaging from './pages/Messaging.jsx'
-import Video from './pages/Video.jsx'
+import Video from './pages/videoconf.jsx'
 import Projects from './pages/Projects.jsx'
 import Finance from './pages/Finance.jsx'
-import Analytics from './pages/Business.jsx'
+import Analytics from './pages/BusinessDashboard.jsx'
 import Settings from './pages/Settings.jsx'
 import Help from './pages/Help.jsx'
 import Home from './pages/Home.jsx'
 import Navbar from './components/Navbar.jsx';
 import { Routes, Route } from 'react-router';
+// import { RequireOrg } from './components/RequireOrg.jsx';
+import { RequireOrg } from './components/RequireOrg.jsx';
+import Onboarding from './components/Onboarding.jsx';
 
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
@@ -26,6 +29,7 @@ function App() {
       <div className="mt-4 pt-4">
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/onboarding" element={<Onboarding />} /> */}
           <Route path="/home" element={<Home />} />
           <Route path="/user" element={<Dashboard />} />
           <Route path="/messaging" element={<Messaging />} />

@@ -1,5 +1,5 @@
 import { Link } from "react-router"; // Use react-router-dom instead of react-router
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignInButton, UserButton, OrganizationSwitcher} from "@clerk/clerk-react";
 
 const Navbar = () => {
   return (
@@ -40,9 +40,9 @@ const Navbar = () => {
                 <button className="btn btn-primary">Sign In</button>
               </SignInButton>
             </SignedOut>
-
             {/* Show User Button (Profile & Sign-Out) when Signed In */}
             <SignedIn>
+              <OrganizationSwitcher/>
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </div>

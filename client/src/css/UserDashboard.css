@@ -1,0 +1,46 @@
+body {
+    padding-top: 56px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard-section {
+    padding: 50px 0;
+    background: #f8f9fa;
+  }
+  
+  .dashboard-card {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .dashboard-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .footer {
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  .equal-height {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .login-signup-container {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+  }
+  

@@ -3,44 +3,37 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  /* Hero Section */
   .hero-section {
     background: linear-gradient(to right, #007bff, #6610f2);
     color: white;
     padding: 100px 0;
-    margin-top: 56px;
     text-align: center;
   }
   
-  /* Feature Boxes */
-  .feature-box {
-    text-align: center;
+  .settings-box {
     padding: 30px;
     background: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    height: 100%;
+    margin-top: 30px;
   }
   
-  .feature-box:hover {
-    transform: scale(1.05);
-    background: #e9ecef;
+  .settings-form .form-group {
+    margin-bottom: 20px;
   }
   
-  /* CTA Section */
-  .cta-section {
-    background-color: #343a40;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  /* Footer */
   .footer {
-    background-color: #212529;
+    background: #212529;
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  .toggle-btn-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
   
