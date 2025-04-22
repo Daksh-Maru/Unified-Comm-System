@@ -1,38 +1,13 @@
 import React from 'react';
 import '../css/VideoConferencing.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from '../components/Navbar';
 
 const VideoConferencing = () => {
   return (
     <div>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">UCP</a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item"><a className="nav-link" href="home.html">Home</a></li>
-              <li className="nav-item"><a className="nav-link" href="user.html">Dashboard</a></li>
-              <li className="nav-item"><a className="nav-link" href="messaging.html">Messaging</a></li>
-              <li className="nav-item"><a className="nav-link active" href="videoconf.html">Video</a></li>
-              <li className="nav-item"><a className="nav-link" href="email.html">Email</a></li>
-              <li className="nav-item"><a className="nav-link" href="projects.html">Projects</a></li>
-              <li className="nav-item"><a className="nav-link" href="finance.html">Finance</a></li>
-              <li className="nav-item"><a className="nav-link" href="business.html">Analytics</a></li>
-              <li className="nav-item"><a className="nav-link" href="settings.html">Settings</a></li>
-              <li className="nav-item"><a className="nav-link" href="help.html">Help</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="hero-section">

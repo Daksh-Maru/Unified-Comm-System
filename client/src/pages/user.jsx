@@ -2,39 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import '../css/UserDashboard.css';
+import Navbar from "../components/Navbar";
 
 const UserDashboard = () => {
   return (
     <div>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">UCP</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item"><a className="nav-link" href="home.html">Home</a></li>
-              <li className="nav-item"><a className="nav-link active" href="user.html">Dashboard</a></li>
-              <li className="nav-item"><a className="nav-link" href="messaging.html">Messaging</a></li>
-              <li className="nav-item"><a className="nav-link" href="videoconf.html">Video</a></li>
-              <li className="nav-item"><a className="nav-link" href="email.html">Email</a></li>
-              <li className="nav-item"><a className="nav-link" href="projects.html">Projects</a></li>
-              <li className="nav-item"><a className="nav-link" href="finance.html">Finance</a></li>
-              <li className="nav-item"><a className="nav-link" href="business.html">Analytics</a></li>
-              <li className="nav-item"><a className="nav-link" href="settings.html">Settings</a></li>
-              <li className="nav-item"><a className="nav-link" href="help.html">Help</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      {/* Login/Signup Button */}
-      <div style={{ position: "absolute", right: 20, top: 70 }}>
-        <a href="login.html" className="btn btn-outline-dark me-2">Login</a>
-        <a href="signup.html" className="btn btn-primary">Sign Up</a>
-      </div>
+      <Navbar />
 
       {/* Dashboard Section */}
       <section className="dashboard-section" style={{ padding: "50px 0", background: "#f8f9fa" }}>
@@ -42,12 +16,12 @@ const UserDashboard = () => {
           <h1 className="text-center mb-4">User Dashboard</h1>
           <div className="row">
             {[
-              { title: "Messaging", desc: "Access your real-time messages and chatbots.", link: "messaging.html" },
-              { title: "Video Calls", desc: "Start or join HD video meetings.", link: "video.html" },
-              { title: "Email", desc: "Manage your emails efficiently.", link: "email.html" },
-              { title: "Projects", desc: "Organize and track your projects.", link: "project.html" },
-              { title: "Finance", desc: "Monitor and manage your business finances.", link: "finance.html" },
-              { title: "Analytics", desc: "Gain insights through business analytics.", link: "analytics.html" }
+              { title: "Messaging", desc: "Access your real-time messages and chatbots.", link: "messaging" },
+              { title: "Video Calls", desc: "Start or join HD video meetings.", link: "video" },
+              { title: "Email", desc: "Manage your emails efficiently.", link: "email" },
+              { title: "Projects", desc: "Organize and track your projects.", link: "projects" },
+              { title: "Finance", desc: "Monitor and manage your business finances.", link: "finance" },
+              { title: "Analytics", desc: "Gain insights through business analytics.", link: "business" }
             ].map((card, index) => (
               <div key={index} className="col-md-4 mb-4 d-flex">
                 <div className="dashboard-card w-100" style={cardStyle}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/Messaging.css';
+import Navbar from '../components/Navbar';
 
 function Messaging() {
   const [message, setMessage] = useState('');
@@ -20,21 +21,7 @@ function Messaging() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">UCP</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item"><a className="nav-link" href="home.html">Home</a></li>
-              <li className="nav-item"><a className="nav-link" href="user.html">Dashboard</a></li>
-              <li className="nav-item"><a className="nav-link active" href="messaging.html">Messaging</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Chat Container */}
       <div className="chat-container" style={{ maxWidth: '800px', margin: '50px auto', background: '#fff', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>

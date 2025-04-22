@@ -2,33 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router';
 import '../css/Home.css';
+import Navbar from '../components/Navbar';
+import { SignedIn, SignedOut, SignInButton, UserButton, OrganizationSwitcher} from "@clerk/clerk-react";
 
 function Home() {
   return (
     <>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">UCP</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/user">Dashboard</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/messaging">Messaging</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/videoconf">Video</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/email">Email</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/projects">Projects</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/finance">Finance</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/business">Analytics</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/settings">Settings</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/help">Help</Link></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="hero-section text-white text-center py-5" style={{
@@ -40,7 +21,20 @@ function Home() {
         <div className="container">
           <h1 className="display-4">Seamless Business Communication</h1>
           <p className="lead">Unify messaging, video conferencing, project management, and more in one powerful platform.</p>
-          <Link to="/user" className="btn btn-light btn-lg">Get Started</Link>
+          <div>
+            {/* Show Sign-In button when Signed Out */}
+            <SignedOut>
+              <SignInButton mode="modal">
+                {/* <button className="btn btn-primary">Sign In</button> */}
+                <button className="btn btn-light btn-lg">Get Started</button>
+              </SignInButton>
+            </SignedOut>
+            {/* Show  when Signed In */}
+            {/* <SignedIn>
+              <OrganizationSwitcher/>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn> */}
+          </div>
         </div>
       </section>
 
@@ -67,7 +61,6 @@ function Home() {
         <div className="container">
           <h2>Boost Your Productivity Today!</h2>
           <p>Start collaborating with your team more efficiently using UCP.</p>
-          <Link to="/user" className="btn btn-primary btn-lg">Join Now</Link>
         </div>
       </section>
 
