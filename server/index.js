@@ -7,6 +7,7 @@ const userRouter = require("./routes/user");
 const cookieParser = require("cookie-parser");
 const organizationRouter = require("./routes/organization.js");
 const clerkUserRouter = require("./routes/clerkUsers.js");
+const financeRouter = require("./routes/finance.js");
 const cors = require("cors");
 
 loadDotenv();
@@ -29,6 +30,7 @@ app.get("/", (req, res) => {
 app.use("/user", userRouter);
 app.use("/organization", organizationRouter);
 app.use("/clerkUser", clerkUserRouter);
+app.use("/finance", financeRouter);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

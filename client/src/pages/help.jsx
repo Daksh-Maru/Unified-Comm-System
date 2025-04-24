@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/Help.css'; // Optional: You can place your styles here if you want to separate them
+import '../css/Help.css';
 import Navbar from '../components/Navbar';
 
 function HelpSupport() {
+    const [showAlert, setShowAlert] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData({ ...formData, [id]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setShowAlert(true);
+        // Optional: clear form
+        setFormData({ name: '', email: '', message: '' });
+
+        // Hide alert after 5 seconds
+        setTimeout(() => setShowAlert(false), 5000);
+    };
+
     return (
         <div>
-            {/* Navbar */}
             <Navbar />
 
-            {/* Hero Section */}
             <section className="hero-section">
                 <div className="container">
                     <h1 className="display-4">Help & Support</h1>
@@ -17,7 +37,6 @@ function HelpSupport() {
                 </div>
             </section>
 
-            {/* FAQs Section */}
             <section className="container">
                 <div className="section-box">
                     <h3 className="text-center">Frequently Asked Questions (FAQs)</h3>
@@ -36,29 +55,59 @@ function HelpSupport() {
                 </div>
             </section>
 
-            {/* Queries Section */}
             <section className="container">
                 <div className="section-box">
                     <h3 className="text-center">Submit a Query</h3>
-                    <form action="#" method="post">
+
+                    {showAlert && (
+                        <div className="alert alert-success alert-dismissible fade show" role="alert">
+                            Your query has been accepted. We will reach out to you shortly!
+                            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={() => setShowAlert(false)}></button>
+                        </div>
+                    )}
+
+                    <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="query-name">Your Name</label>
-                            <input type="text" className="form-control" id="query-name" placeholder="Enter your name" />
+                            <label htmlFor="name">Your Name</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="name"
+                                placeholder="Enter your name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="query-email">Your Email</label>
-                            <input type="email" className="form-control" id="query-email" placeholder="Enter your email" />
+                            <label htmlFor="email">Your Email</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                id="email"
+                                placeholder="Enter your email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="query-message">Your Message</label>
-                            <textarea className="form-control" id="query-message" rows="4" placeholder="Enter your query or message"></textarea>
+                            <label htmlFor="message">Your Message</label>
+                            <textarea
+                                className="form-control"
+                                id="message"
+                                rows="4"
+                                placeholder="Enter your query or message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
                         <button type="submit" className="btn btn-primary btn-block mt-3">Submit Query</button>
                     </form>
                 </div>
             </section>
 
-            {/* Further Contact Info Section */}
             <section className="container">
                 <div className="section-box">
                     <h3 className="text-center">Further Contact Information</h3>
@@ -71,7 +120,6 @@ function HelpSupport() {
                 </div>
             </section>
 
-            {/* Footer */}
             <footer className="footer">
                 <div className="container">
                     <p>&copy; 2025 Unified Communication Platform. All rights reserved.</p>

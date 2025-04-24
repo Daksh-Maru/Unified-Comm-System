@@ -17,7 +17,7 @@ const UserDashboard = () => {
           <div className="row">
             {[
               { title: "Messaging", desc: "Access your real-time messages and chatbots.", link: "messaging" },
-              { title: "Video Calls", desc: "Start or join HD video meetings.", link: "video" },
+              // { title: "Video Calls", desc: "Start or join HD video meetings.", link: "video" },
               { title: "Email", desc: "Manage your emails efficiently.", link: "email" },
               { title: "Projects", desc: "Organize and track your projects.", link: "projects" },
               { title: "Finance", desc: "Monitor and manage your business finances.", link: "finance" },
